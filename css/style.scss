@@ -1,0 +1,48 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.container {
+  h1 {
+    i {
+      color: rgb(0, 255, 0);
+      position: absolute;
+      left: 105px;
+      top: 5px;
+      @media screen and (min-width: 992px) {
+        left: 35px;
+      }
+    }
+    span {
+      color: rgb(6, 226, 255);
+    }
+  }
+}
+
+.modal-box {
+  z-index: 2;
+  border-radius: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  width: 300px;
+  top: 150px;
+  left: 100px;
+
+  @media screen and (min-width: 769px) {
+    width: 500px;
+    top: 150px;
+    left: 400px;
+  }
+}
+
+.blur-active {
+  filter: blur(20px);
+  pointer-events: none;
+}
+
+.display {
+  visibility: visible;
+  opacity: 1;
+  transition: 1s;
+}

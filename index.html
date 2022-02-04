@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="fontawesome/css/all.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container mt-3 bg-success rounded-3 blur">
+      <div class="row justify-content-center">
+        <div class="title col-sm-8 col-lg-5 rounded-1">
+          <h1 class="display-4 text-center fw-lighter position-relative text-white">
+            <i class="fas fa-book-open"></i>
+            <span>Book</span>Shelf
+          </h1>
+          <form class="d-flex flex-column form">
+            <div class="input-div">
+              <input id="title" type="text" class="form-control my-1 input-form" placeholder="Title" />
+            </div>
+            <div class="input-div">
+              <input id="author" type="text" class="form-control my-1 input-form" placeholder="Author" />
+            </div>
+            <div class="input-div">
+              <input id="year" type="number" class="form-control my-1 input-form" placeholder="Year" />
+            </div>
+            <div class="form-check mt-1">
+              <input id="finish" type="checkbox" class="form-check-input" />
+              <label for="finish" class="form-check-label text-white">Mark as read</label>
+            </div>
+            <button id="submit" type="submit" class="btn btn-warning mt-2 mb-3">Add Book</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container blur">
+      <div class="row justify-content-center">
+        <div class="col-sm col-lg-8">
+          <div class="input-group mt-4">
+            <input type="text" id="search" class="form-control" placeholder="Search title" />
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5 mb-3">
+        <h5 class="text-center text-primary">Finished Book</h5>
+        <table class="table table-striped mt-1">
+          <thead>
+            <tr class="text-center border-top">
+              <th>ID</th>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Year</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="tbody" class="text-center"></tbody>
+        </table>
+      </div>
+
+      <div class="row mt-2 mb-5">
+        <h5 class="text-center text-primary">Unfinished Book</h5>
+        <table class="table table-striped mt-1">
+          <thead>
+            <tr class="text-center border-top">
+              <th>ID</th>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Year</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="tbody-unfinished" class="text-center"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="modal-box position-fixed bg-secondary">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-lg-8 col-sm-1 bg-secondary rounded-2">
+          <form class="d-flex flex-column form-edit">
+            <h1 class="text-center text-dark mt-2">Edit Book</h1>
+            <div class="input-div">
+              <input id="title-edit" type="text" class="form-control my-1 input-form" placeholder="Title" />
+            </div>
+            <div class="input-div">
+              <input id="author-edit" type="text" class="form-control my-1 input-form" placeholder="Author" />
+            </div>
+            <div class="input-div">
+              <input id="year-edit" type="number" class="form-control my-1 input-form" placeholder="Year" />
+            </div>
+            <div class="form-check mt-1">
+              <input id="finish-edit" type="checkbox" class="form-check-input" />
+              <label for="finish-edit" class="form-check-label text-white">Finish read</label>
+            </div>
+            <button id="submit-edit" type="submit" class="btn btn-warning mt-2 mb-3">Edit Book</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
